@@ -6,5 +6,7 @@
 
     <!-- including robot core structure -->
     <xacro:include filename= 'robot_core.xacro' />
+    <!-- including robot gazebo control -->
+    <xacro:include filename= 'gazebo_control.xacro' />
 
 </robot>
