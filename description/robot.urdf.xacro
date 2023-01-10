@@ -6,7 +6,24 @@
 
     <!-- including robot core structure -->
     <xacro:include filename= 'robot_core.xacro' />
+
+    <!-- need to comment the control not used -->
+
     <!-- including robot gazebo control -->
-    <xacro:include filename= 'gazebo_control.xacro' />
+    <!--<xacro:include filename= 'gazebo_control.xacro' />-->
+
+    <!-- including ros2_control -->
+    <xacro:include filename= 'ros2_control.xacro' />
+
+    <!-- including lidar in gazebo -->
+    <xacro:include filename= 'lidar.xacro' />
+
+    <!-- need to comment the camera not used -->
+
+    <!-- including camera in gazebo -->
+    <!--<xacro:include filename= 'camera.xacro' />-->
+
+    <!-- including depth camera in gazebo -->
+    <xacro:include filename= 'depth_camera.xacro' />
 
 </robot>
