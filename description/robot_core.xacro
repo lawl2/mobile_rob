@@ -40,14 +40,16 @@
         <visual>
             <origin xyz="0.15 0 0.075" rpy="0 0 0"/>
             <geometry>
-                <box size="0.3 0.3 0.15"/>
+                <!-- <box size="0.3 0.3 0.15"/> -->
+                <cylinder length="0.1" radius="0.25" />/>
             </geometry>
             <material name="white"/>
         </visual>
         <collision>
             <origin xyz="0.15 0 0.075" rpy="0 0 0"/>
             <geometry>
-                <box size="0.3 0.3 0.15"/>
+                <!--<box size="0.3 0.3 0.15"/>-->
+                <cylinder length="0.1" radius="0.25" />/>
             </geometry>
         </collision>
         <xacro:inertial_box mass="0.5" x="0.3" y="0.3" z="0.15">
@@ -75,9 +77,11 @@
             </geometry>
             <material name="blue"/>
         </visual>
+        <!--PROBLEM 2 wheel drift solved replacing cylinder with sphere-->
         <collision>
             <geometry>
-                <cylinder length="0.04" radius="0.05" />/>
+                <!--<cylinder length="0.04" radius="0.05" />/>-->
+                <sphere radius="0.05" />/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.05" radius="0.05">
@@ -107,7 +111,8 @@
         </visual>
         <collision>
             <geometry>
-                <cylinder length="0.04" radius="0.05" />/>
+                <!--<cylinder length="0.04" radius="0.05" />/>-->
+                <sphere radius="0.05" />/>
             </geometry>
         </collision>
         <xacro:inertial_cylinder mass="0.1" length="0.05" radius="0.05">
