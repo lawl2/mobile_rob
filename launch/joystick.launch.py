@@ -14,14 +14,23 @@ def generate_launch_description():
             parameters=[joy_params],
          )
 
-    
+    #used before nav2
+    #teleop_node = Node(
+    #        package='teleop_twist_joy', 
+    #        executable='teleop_node',
+    #        name = 'teleop_node',
+    #        parameters=[joy_params],
+    #        remappings=[('/cmd_vel', '/diff_cont/cmd_vel_unstamped')]
+    #        )
+
+    #used with nav2
     teleop_node = Node(
-            package='teleop_twist_joy', 
-            executable='teleop_node',
-            name = 'teleop_node',
-            parameters=[joy_params],
-            remappings=[('/cmd_vel', '/diff_cont/cmd_vel_unstamped')]
-            )
+        package='teleop_twist_joy', 
+        executable='teleop_node',
+        name = 'teleop_node',
+        parameters=[joy_params],
+        remappings=[('/cmd_vel', '/cmd_vel_joy')]
+        )
 
     return LaunchDescription([
         joy_node,  
