@@ -22,7 +22,7 @@ This project has the aim to simulate a mobile robot which is able to transport t
 ### Controlling
 
 * Gazebo control
-8 ros2_control
+* ros2_control
 * Teleoperation
 * Final definition of the launch file
 
